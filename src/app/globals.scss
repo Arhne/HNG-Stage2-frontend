@@ -1,0 +1,89 @@
+:root {
+  --theme-white: #FFFFFF;
+  --theme-white-100: #F6F6F6;
+  --theme-black-500: #000000;
+  --theme-gray-500: #d0d0d09a;
+  --theme-blue-300: #B5D7FE6E;
+  --theme-blue-400: #B5D7FE;
+  --theme-blue-500: #2961B5;
+  --theme-blue-800: #161480;
+  --theme-orange-600: #EB7E30;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+h1 {
+  font-weight: 700;
+  font-size: 41.26px;
+  line-height: 55.76px;
+}
+// h2 {
+//   font-weight: 700;
+//   font-size: 48px;
+//   line-height: 100px;
+// }
+// h3 {
+//   font-weight: 500;
+//   font-size: 64px;
+//   line-height: 100px;
+// }
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 899px){
+  // p {
+  //   font-weight: 400;
+  //   font-size: 24px;
+  //   line-height: 36px;
+  // }
+  h1 {
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 60px;
+  }
+  // h2 {
+  //   font-weight: 700;
+  //   font-size: 48px;
+  //   line-height: 100px;
+  // }
+  // h3 {
+  //   font-weight: 500;
+  //   font-size: 64px;
+  //   line-height: 100px;
+  // }
+}
+@media (min-width: 1005px){
+  p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 100px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100px;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 100px;
+  }
+}
