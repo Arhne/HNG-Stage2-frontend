@@ -5,8 +5,9 @@ import Image from "next/image";
 import { Minus, Plus } from "../../../component/icons";
 import { useState } from "react";
 import { Button } from "@/components";
+import { Select } from 'antd';
 
-const myCart = () => {
+const MyCart = () => {
   const [count, setCount] = useState(0);
   return (
     <div className={styles.cart}>
@@ -103,4 +104,4 @@ const myCart = () => {
   );
 };
 
-export default myCart;
+export default MyCart;
