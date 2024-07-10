@@ -1,10 +1,13 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import { Listings } from '@/components/data'
 import { Button } from '@/components'
 import Image from 'next/image'
 import styles from "./new-arrivals.module.scss"
+import { Modal } from "@/components"
 
 const newArrival= () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className={styles.category}>
 
@@ -21,10 +24,16 @@ const newArrival= () => {
             
             <div className={styles.listingBtn}>
               <Button type='submit' text='View Details' style={styles.transparentBtn}/>
-              <Button type='submit' text='Add To Cart'style={styles.fillBtn}/>
+              <Button type='submit' text='Add To Cart'style={styles.fillBtn} onClick={() => setShowModal(true)}/>
             </div>
+            {showModal && <Modal 
+            cartItem={listing.brand} 
+            onClickClose = {()=> setShowModal(false)}
+            />}
           </div>
         ))}
+
+
       </div>
 
       
