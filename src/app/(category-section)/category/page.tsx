@@ -6,7 +6,7 @@ import Image from 'next/image'
 import styles from "./new-arrivals.module.scss"
 import { Modal } from "@/components"
 
-const newArrival= () => {
+const NewArrival= () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <div className={styles.category}>
@@ -41,4 +41,4 @@ const newArrival= () => {
   )
 }
 
-export default newArrival
+export default NewArrival
