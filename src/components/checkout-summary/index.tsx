@@ -57,10 +57,10 @@ export const CheckoutSummaryComp = () => {
 
       <div className={styles.section}>
       <div className={styles.footerPrices}>
-                    <h3>Subtotal: #100000</h3>
-                    <h3>Tax(After Discount): #0.00</h3>
-                    <h3>Shooping Fee: #0.00 </h3>
-                    <h2>Total: #100000</h2>
+                    <h3 className={styles.font}>Subtotal: #100000</h3>
+                    <h3 className={styles.font}>Tax(After Discount): #0.00</h3>
+                    <h3 className={styles.font}>Shooping Fee: #0.00 </h3>
+                    <h2 className={styles.font}>Total: #100000</h2>
 
                 </div>
 

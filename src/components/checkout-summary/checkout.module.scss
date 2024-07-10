@@ -7,9 +7,10 @@
   // text-align: center;
   .title {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 30px;
     margin-block: 0;
+    padding-block: 15px;
     text-align: center;
   }
   .col {
@@ -62,12 +63,21 @@
 
   .flexCoupon {
     display: flex;
-    align-items: center;
+    align-items: last baseline;
     gap: 2rem;
     border-bottom: 1px solid var(--theme-gray-500);
     padding-bottom: 40px;
     margin-bottom: 30px;
   }
+
+  // .flexCoupon{
+  //   display: grid;
+  //   grid-template-columns: 1fr .5fr;
+  //   border-bottom: 1px solid var(--theme-gray-500);
+  // //  align-items: baseline;
+  // justify-items: ;
+   
+  // }
 
   .footerPrices {
     display: flex;
@@ -77,9 +87,12 @@
     gap: .5rem;
     align-items: flex-end;
 
-    // & > * {
-    //   padding-block: 10px;
-    // }
+    .font{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      margin-block: 8px;
+    }
   }
   .btn {
     margin: auto;

@@ -1,25 +1,46 @@
 .InputComp {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  .input {
+    padding: 0px 10px;
+    height: 50px;
+    border-radius: 8px;
+    color: var(--theme-black-500);
+    background: transparent;
+    border: 0.5px solid var(--theme-black-500);
+
+    &::placeholder {
+      color: var(--theme-gray-500);
+    }
+  }
+
+  .new {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-    .input {
-      padding: 0px 10px;
-      height: 50px;
-      border-radius: 8px;
-      color: var(--theme-black-500);
-      background: transparent;
-      border: 0.5px solid var(--theme-black-500);
-      &::placeholder {
+    align-items: center;
+    border: 0.5px solid var(--theme-black-500);
+    padding: 0px 10px;
+    height: 50px;
+    border-radius: 8px;
+    color: var(--theme-black-500);
+    background: transparent;
+
+    .overide {
+      border: none;
+      width: 100%;
+       &::placeholder {
         color: var(--theme-gray-500);
       }
     }
+  }
     .label {
       font-size: 14px;
       line-height: 20px;
       font-weight: 500;
       color: var(--theme-gray-500);
     }
-  
+
     .iconButton {
       width: 20px;
       height: 20px;
@@ -28,6 +49,7 @@
       justify-content: center;
       border: none;
     }
+
     .passwordInputWrap {
       display: flex;
       flex-direction: row;
@@ -37,23 +59,27 @@
       height: 50px;
       border-radius: 8px;
       color: var(--theme-black-500);
-    //   background: var(--theme-gray-500);
+      //   background: var(--theme-gray-500);
       border: 0.5px solid var(--theme-gray-500);
       margin-bottom: 20px;
+
       &::placeholder {
         color: var(--theme-gray-500);
       }
     }
+
     .passwordInput {
       height: 100%;
       width: 100%;
       color: var(--theme-black-500);
       background: transparent;
       outline: none;
+
       &::placeholder {
         color: var(--theme-gray-500);
       }
     }
+
     .error {
       font-size: 14px;
       line-height: 20px;
@@ -62,4 +88,3 @@
       text-align: left;
     }
   }
-  

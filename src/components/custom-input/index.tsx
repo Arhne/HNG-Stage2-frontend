@@ -1,12 +1,11 @@
 "use client"
 import React, { useState } from "react";
-// import "react-phone-number-input/style.css";
-// import PhoneInput, { type Value }  from "react-phone-number-input";
 import styles from "./custom-input.module.scss";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { IoCardOutline } from "react-icons/io5";
 
 interface IFormInput {
-  placeholder: string;
+  placeholder?: string;
   labelText?: string;
   value?: string | number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -18,9 +17,9 @@ interface IFormInput {
 }
 
 interface IFormInputNumber {
-  placeholder: string;
+  placeholder?: string;
   labelText?: string;
-  value: number | undefined;
+  value?: number | undefined;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   errorMessage?: string;
   disabled?: boolean;
@@ -95,6 +94,34 @@ export const CustomInputNumber = ({
   return (
     <div className={styles.InputComp}>
       {labelText && <label className={styles.label}>{labelText}</label>}
+      <div className={styles.new}>
+      <IoCardOutline size={30}/>
+      <input
+        type="number"
+        className={styles.overide}
+        placeholder={placeholder}
+        onChange={onChange}
+        {...rest}
+      />
+      </div>
+      {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+    </div>
+  );
+};
+
+
+export const CustomPhoneInput = ({
+  placeholder,
+  labelText,
+  errorMessage,
+  onChange,
+  ...rest
+}: IFormInputNumber) => {
+  return (
+    <div className={styles.InputComp}>
+      {labelText && <label className={styles.label}>{labelText}</label>}
+     
+     
       <input
         type="number"
         className={styles.input}
@@ -102,34 +129,8 @@ export const CustomInputNumber = ({
         onChange={onChange}
         {...rest}
       />
+      
       {errorMessage && <p className={styles.error}>{errorMessage}</p>}
     </div>
   );
 };
-// export const CustomPhoneInput = ({
-//     placeholder,
-//     customStyle,
-//     labelText,
-//     onChange,
-//     value,
-//     errorMessage,
-//     ...props
-//   }: ICustomPhoneInput) => {
-//     return (
-//       <div className={styles.InputContainer}>
-//         {labelText && <label className={styles.label}>{labelText}</label>}
-//         <PhoneInput
-//           className={`${styles.input} ${styles.PhoneInput}`}
-//           placeholder={"+234"}
-//           international
-//           defaultCountry="NG"
-//           value={value}
-//           onChange={(e: Value) => onChange(e ?? "")}
-//           style={{ ...customStyle }}
-//           {...props}
-//         />
-//         {errorMessage && <p className={styles.error}>{errorMessage}</p>}
-//       </div>
-//     );
-//   };
-  

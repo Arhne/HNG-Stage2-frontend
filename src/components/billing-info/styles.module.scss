@@ -1,0 +1,23 @@
+.billing{
+    background-color: var(--theme-white);
+    
+    padding-inline: 20px;
+    margin-block: 30px;
+    padding-bottom: 40px;
+    & > * {
+        padding-bottom: 20px;
+    }
+    .col {
+            display: flex;
+            align-items: last baseline;
+            gap: 2rem;
+            
+       & > *{
+        width: 50%;
+       }     
+          
+    }
+    
+    
+}
+

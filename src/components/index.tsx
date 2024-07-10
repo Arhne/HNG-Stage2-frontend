@@ -5,6 +5,7 @@ export {
     CustomInput,
     CustomPasswordInput,
     CustomInputNumber,
+    CustomPhoneInput,
 } from "./custom-input"
 
 export { CheckoutSummaryComp } from "./checkout-summary"

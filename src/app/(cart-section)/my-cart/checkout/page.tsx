@@ -5,9 +5,13 @@ import styles from "./final.module.scss"
 const page = () => {
   return (
     <div className={styles.col}>
-    <BillingInfo />
+      <div className={styles.hidden}>
+       <BillingInfo />
+      </div>
+
     <CheckoutSummaryComp />
     </div>
+   
   )
 }
 
