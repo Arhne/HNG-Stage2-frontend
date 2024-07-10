@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import "react-phone-number-input/style.css";
 // import PhoneInput, { type Value }  from "react-phone-number-input";
-import styles from "./customInput.module.scss";
+import styles from "./custom-input.module.scss";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 interface IFormInput {
