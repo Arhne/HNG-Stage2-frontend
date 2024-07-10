@@ -1,9 +1,11 @@
 import React from 'react'
+import styles from "../style.module.scss"
 
 const trending
  = () => {
   return (
-    <div>trending
+    <div className={styles.category}>
+      Nothing in Trending
       
     </div>
   )

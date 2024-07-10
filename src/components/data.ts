@@ -1,8 +1,8 @@
 
 export const listingMenu = [
-    {name: "catalogue", href: `/category`},
+    {name: "catalogue", href: `/category/catalogue`},
    { name: "trending", href: "/category/trending"},
-   { name: "new arrivals", href: "/category/new-arrivals"},
+   { name: "new arrivals", href: "/category"},
    { name: "sales", href: "/category/sales"},
 ]
 

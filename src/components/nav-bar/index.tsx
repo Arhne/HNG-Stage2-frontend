@@ -58,7 +58,7 @@ export const NavBar = () => {
           <MenuIcon />
           </div>
           <BrandName />
-          <div className={styles.cart}>
+          <div className={styles.cart} onClick={() => router.push(`/my-cart`)}>
           <CartIcon />
           </div>
         </main>

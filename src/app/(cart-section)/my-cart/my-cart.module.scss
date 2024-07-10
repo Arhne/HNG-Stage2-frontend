@@ -1,0 +1,159 @@
+.cart{
+    background-color: var(--theme-white-100);
+    text-align: center;
+    .col {
+        display: grid;
+    }
+    .description{
+        background-color: var(--theme-white); 
+        border-radius: 50px 50px 0 0;
+        padding-inline: 20px;
+    }
+    .bagName {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        margin-block: 0;
+    }
+
+    .bagPrice {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 33px;
+        margin-bottom: 0;
+    }
+    .bagdesc {
+        font-weight: 400;
+        font-size: 17.57px;
+        line-height: 26px;
+    }
+    .color{
+        display: none;
+    }
+    .flex, .flexdesc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .plus{
+        background-color: var(--theme-orange-600);
+        border-radius: 100vmax;
+        padding: 8px;
+    }
+    .showcase{
+        display: none
+    }
+    .fillBtn {
+        font-size: 10px;
+        // padding-inline: 10px;
+        color: var(--theme-white) !important;
+        background-color: var(--theme-orange-600) !important;
+    }
+    .section{
+        background-color: var(--theme-white); 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 759px){
+    .cart{
+    padding-inline: 50px;
+    background-color: var(--theme-white);
+    margin-block: 40px;
+
+    .col {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 2fr));
+        gap: 2.5rem;
+    }
+    .cartbag1{
+        padding-top: 80px;
+        background-color: var(--theme-blue-300);
+        border-radius: 18px;
+    }
+  .description {
+    display: flex;
+    flex-direction: column;
+    // display: block;
+    // margin-top: 50px;
+    text-align: left;
+}
+.bagName {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.bagPrice {
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 47px;
+}
+.bagdesc {
+    font-weight: 400;
+    font-size: 15.75px;
+    line-height: 22px;
+}
+.color{
+    display: block;
+}
+.colorselector{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+.colorselector > *{
+    width: 30px;
+    height: 30px;
+    border-radius: 100vmax;
+    border: none;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: var(--theme-blue-400);
+}
+.black{
+    background-color: var(--theme-black-500);
+}
+.white{
+    background-color: transparent;
+    border: 1px solid var(--theme-black-500);
+}
+.orange{
+    background-color: var(--theme-orange-600);
+}
+.flexdesc{
+    justify-content: left;
+}
+.showcase{
+    display: block;
+    display: flex;
+
+    & div{
+     border: 2px solid var(--theme-gray-500);
+     padding: 20px;
+     border-radius: 10px;
+    }
+    & div:focus-within, 
+    div:focus-visible, div:hover {
+        border-color: var(--theme-orange-600);
+       }
+}
+.section  {
+align-items: flex-start;
+flex-direction: column;
+justify-content: left;
+padding-inline: 20px;
+gap: 1.5rem;
+}
+}   
+}
+

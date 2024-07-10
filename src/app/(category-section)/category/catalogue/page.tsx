@@ -1,14 +1,13 @@
-import React from 'react'
+import React from "react";
 import styles from "../style.module.scss"
-
-const sales
+const catalogue
  = () => {
   return (
     <div className={styles.category}>
-      Nothing in Sales
-      
+      Nothing in catalogue
+
     </div>
   )
 }
 
-export default sales
+export default catalogue
