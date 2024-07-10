@@ -7,8 +7,8 @@
       height: 50px;
       border-radius: 8px;
       color: var(--theme-black-500);
-      background: var(--theme-gray-500);
-      border: 0.5px solid var(--theme-gray-500);
+      background: transparent;
+      border: 0.5px solid var(--theme-black-500);
       &::placeholder {
         color: var(--theme-gray-500);
       }

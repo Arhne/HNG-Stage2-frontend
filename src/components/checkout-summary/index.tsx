@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { CustomInput } from "@/components";
 import { CouponModal } from "../modal";
 
-const CheckoutSummaryComp = () => {
+export const CheckoutSummaryComp = () => {
   const [count, setCount] = useState(0);
   const router = useRouter();
   const [addCoupon, setAddCoupon] = useState(false);
@@ -21,11 +21,13 @@ const CheckoutSummaryComp = () => {
           <Image
             src="/images/cartbag1.png"
             alt="bag image"
-            width={100}
-            height={150}
+            width={60}
+            height={90}
           />
         </div>
 
+<div className={styles.coldire}>
+<p className={styles.bagName}>Prada Bag</p>
         <div className={styles.flex}>
           <p className={styles.bagdesc}>Qty</p>
           <Minus
@@ -43,6 +45,7 @@ const CheckoutSummaryComp = () => {
             className={styles.plus}
           />
         </div>
+        </div>
       </div>
 
       <div className={styles.flexCoupon}>
@@ -53,18 +56,23 @@ const CheckoutSummaryComp = () => {
       {addCoupon && <CouponModal onClickClose={() => setAddCoupon(false)} />}
 
       <div className={styles.section}>
-        <div></div>
+      <div className={styles.footerPrices}>
+                    <h3>Subtotal: #100000</h3>
+                    <h3>Tax(After Discount): #0.00</h3>
+                    <h3>Shooping Fee: #0.00 </h3>
+                    <h2>Total: #100000</h2>
+
+                </div>
 
         <div>
           <Button
             text={"Pay Now".toUpperCase()}
             type="button"
-            onClick={() => router.push(`my-cart/checkout`)}
+            style={styles.btn}
+            // onClick={() => router.push(`my-cart/checkout`)}
           />
         </div>
       </div>
     </div>
   );
 };
-
-export default CheckoutSummaryComp;

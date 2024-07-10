@@ -7,3 +7,5 @@ export {
     CustomInputNumber,
 } from "./custom-input"
 
+export { CheckoutSummaryComp } from "./checkout-summary"
+export { BillingInfo } from "./billing-info"
