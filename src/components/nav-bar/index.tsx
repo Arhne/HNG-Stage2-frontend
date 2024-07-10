@@ -5,7 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
 import { Button } from "../custom-button";
 import { navLinks } from "./navlink"
-import Image from "next/image";
+import { IoMdClose } from "react-icons/io";
 import { 
   BrandName, 
   MenuIcon,
@@ -66,11 +66,8 @@ export const NavBar = () => {
       {mobileNav && (
         <main className={styles.MobileNav}>
           <section className={styles.header}>
-            <div className={styles.imgContainer}>
-            
-            </div>
             <span onClick={handleMobileNav}>
-              {/* <CloseIcon /> */}
+            <IoMdClose size={30}/>
             </span>
           </section>
 
@@ -79,17 +76,13 @@ export const NavBar = () => {
               {navLinks.map((link, index) => (
                 <div
                   key={index}
-                  className={styles.Link}
+                  className={isActive(link.link) ? `${styles.Icon}` : `${styles.Link}`}
                   onClick={() => {
                     handleMobileNav(), router.push(link.link);
                   }}
                 >
                   {link.title}
-                  {isActive(link.link) && (
-                    <div className={styles.icon}>
-                      {/* <HoverIcon /> */}
-                    </div>
-                  )}
+                 
                 </div>
               ))}
             </main>
